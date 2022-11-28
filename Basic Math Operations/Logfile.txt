@@ -1,0 +1,13 @@
+﻿2022-11-11 16:15:52.013 DEBUG [6524] [main@25] main() called
+2022-11-11 16:15:52.017 DEBUG [6524] [readNumber@7] readNumber() called
+2022-11-11 16:15:54.323 DEBUG [6524] [readNumber@7] readNumber() called
+2022-11-11 16:15:55.807 DEBUG [6524] [writeAnswer@16] writeAnswer() called
+2022-11-11 16:16:27.071 DEBUG [14632] [main@25] main() called
+2022-11-11 16:17:00.226 DEBUG [14632] [readNumber@7] readNumber() called
+2022-11-11 16:18:11.520 DEBUG [13564] [main@25] main() called
+2022-11-11 16:18:25.526 DEBUG [13564] [readNumber@7] readNumber() called
+2022-11-11 16:18:53.116 DEBUG [9876] [main@25] main() called
+2022-11-11 16:18:57.920 DEBUG [9876] [readNumber@7] readNumber() called
+2022-11-11 16:19:40.206 DEBUG [3736] [main@25] main() called
+2022-11-11 16:19:40.206 DEBUG [3736] [readNumber@7] readNumber() called
+2022-11-11 16:19:44.768 DEBUG [3640] [main@25] main() called
