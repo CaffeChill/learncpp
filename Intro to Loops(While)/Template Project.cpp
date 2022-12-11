@@ -95,14 +95,22 @@ int main()
     {
         int inner = 5;
 
-        while (inner > outer)
+        while (inner >= 1)
         {
-            std::cout << "X ";
-            inner--;
+            if (inner <= outer)
+            {
+                std::cout << inner << ' ';
+            }
+            else
+            {
+                std::cout << "  ";
+            }
+            --inner;
         }
-        outer++;
-    }
+        std::cout << '\n';
 
+        ++outer;
+    }
 
     return 0;
 }
