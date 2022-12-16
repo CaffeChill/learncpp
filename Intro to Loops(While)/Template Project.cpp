@@ -87,6 +87,7 @@ int main()
 *              5 4 3 2 1
 */
 
+/*
 int main()
 {
     int outer = 1;
@@ -111,6 +112,29 @@ int main()
 
         ++outer;
     }
+
+    return 0;
+}*/
+
+int sumTo(int value)
+{
+    int temp = 0;
+
+    for (int i = 1; i <= value ; i++)
+    {
+        temp += i; // temp = temp + i;
+    }
+    return temp;
+}
+
+int main()
+{
+    int value;
+
+    std::cout << "Enter a value: ";
+    std::cin >> value;
+
+    std::cout << sumTo(value);
 
     return 0;
 }
