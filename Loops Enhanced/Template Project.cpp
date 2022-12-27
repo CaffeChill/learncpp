@@ -108,3 +108,79 @@ At the end of the game, the user should be asked if they want to play again.If t
 
 #include <iostream>
 #include <random>
+
+void enterGame()
+{
+    std::cout << "Let's play a game. I'm thinking of a number between 1 and 100. You have 7 tries to guess what it is.\n";
+}
+
+void hiloGame()
+{
+    std::mt19937 mt;
+    std::uniform_int_distribution limit(1, 100);
+
+    int guess = 0;
+    std::cin >> guess;
+
+    if (guess <= 0)
+    {
+        std::cout << "You should select a number greater than 0.\n";
+        hiloGame();
+    }
+    else if (guess > 100)
+    {
+        std::cout << "You should select a number lower than 101.\n";
+        hiloGame();
+    }
+    else
+    {
+        for (int i = 1; i <= 7; i++)
+            {
+                int temp = limit(mt);
+
+                std::cout << "Guess #" << i << ": " << guess << '\n';
+
+                if (guess == temp)
+                {
+                    std::cout << "Correct! You win!" << '\n';
+                }
+                else if (guess < temp)
+                {
+                    std::cout << "Your guess is too low." << '\n';
+                }
+                else
+                {
+                    std::cout << "Your guess is too high." << '\n';
+                }
+            }
+    }
+}
+
+int main()
+{
+    enterGame();
+
+    hiloGame();
+
+    std::cout << "Would you like to play again (y/n)? ";
+
+    char answer;
+    std::cin >> answer;
+
+    if (answer == 'y')
+    {
+        enterGame();
+        hiloGame();
+    }
+    else if (answer == 'n')
+    {
+        std::cout << "Thank you for playing.\n";
+    }
+    else
+    {
+        std::cout << "Would you like to play again (y/n)? ";
+        //std::cerr << "Error: Please enter 'y' for yes, 'n' for no.\n";
+    }
+
+    return 0;
+}
